@@ -80,7 +80,7 @@ function launch(kernel = '5.15.167.4-microsoft-standard-WSL2', options = {}) {
   return deployAndLaunchWslOrcad('Ubuntu-24.04', {
     holder: holder(),
     createTransport: transport,
-    readRegistryId: async () => '{0283592d-be56-40d4-b935-3dc18c3aa007}',
+    readRegistryId: async () => '0283592d-be56-40d4-b935-3dc18c3aa007',
     ...options
   })
 }
@@ -114,7 +114,7 @@ describe('deployAndLaunchWslOrcad', () => {
     await expect(launch()).resolves.toEqual({
       outcome: 'ready',
       distro: 'Ubuntu-24.04',
-      distroId: '{0283592d-be56-40d4-b935-3dc18c3aa007}',
+      distroId: '0283592d-be56-40d4-b935-3dc18c3aa007',
       port: 6790,
       fullVersion: '1.5.0+ab',
       pid: 4242,
